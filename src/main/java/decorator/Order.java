@@ -8,16 +8,21 @@ public class Order {
     private List<FoodItem> items = new ArrayList<>();
 
     public void addItem(FoodItem item) {
-        // TODO: add the item to the items list
+        items.add(item);
     }
 
     public double getTotalCost() {
-        // TODO: loop over items and sum getCost()
-        return 0;
+        double total = 0;
+        for (FoodItem item : items) {
+            total += item.getCost();
+        }
+        return total;
     }
 
     public void printOrder() {
-        // TODO: print each item's description and cost, then the total
-        //       (format money as String.format("%.2f", ...), e.g. "Total: $3.50")
+        for (FoodItem item : items) {
+            System.out.println(item.getDescription() + " - $" + String.format("%.2f", item.getCost()));
+        }
+        System.out.println("Total: $" + String.format("%.2f", getTotalCost()));
     }
 }

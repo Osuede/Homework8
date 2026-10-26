@@ -2,7 +2,7 @@ package decorator;
 
 /**
  * The customer's loyalty status and the discount it gives.
- * Example tiers: "None" = 0%, "Silver" = 5%, "Gold" = 10% (pick your own).
+ * Example tiers: "None" = 0%, "Silver" = 5%, "Gold" = 10%.
  */
 public class LoyaltyStatus {
     private String level;
@@ -14,8 +14,7 @@ public class LoyaltyStatus {
     }
 
     public double applyDiscount(double total) {
-        // TODO: return the total after the discount
-        return total;
+        return total * (1 - discountRate);
     }
 
     public String getLevel() {
