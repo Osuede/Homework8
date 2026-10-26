@@ -9,13 +9,11 @@ public class Ketchup extends ToppingDecorator {
 
     @Override
     public String getDescription() {
-        // TODO: wrapped item's description + ", Ketchup"
-        return "";
+        return item.getDescription() + ", Ketchup";
     }
 
     @Override
     public double getCost() {
-        // TODO: wrapped item's cost + ketchup price (0.25)
-        return 0;
+        return item.getCost() + 0.25;
     }
 }

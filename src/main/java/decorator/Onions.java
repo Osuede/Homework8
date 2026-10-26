@@ -9,13 +9,11 @@ public class Onions extends ToppingDecorator {
 
     @Override
     public String getDescription() {
-        // TODO: wrapped item's description + ", Onions"
-        return "";
+        return item.getDescription() + ", Onions";
     }
 
     @Override
     public double getCost() {
-        // TODO: wrapped item's cost + onions price (0.50)
-        return 0;
+        return item.getCost() + 0.50;
     }
 }

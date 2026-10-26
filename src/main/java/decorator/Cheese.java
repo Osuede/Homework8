@@ -9,13 +9,11 @@ public class Cheese extends ToppingDecorator {
 
     @Override
     public String getDescription() {
-        // TODO: wrapped item's description + ", Cheese"
-        return "";
+        return item.getDescription() + ", Cheese";
     }
 
     @Override
     public double getCost() {
-        // TODO: wrapped item's cost + cheese price (0.75)
-        return 0;
+        return item.getCost() + 0.75;
     }
 }

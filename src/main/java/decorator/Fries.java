@@ -4,13 +4,11 @@ package decorator;
 public class Fries implements FoodItem {
     @Override
     public String getDescription() {
-        // TODO: return "Fries"
-        return "";
+        return "Fries";
     }
 
     @Override
     public double getCost() {
-        // TODO: return the base price, 2.49
-        return 0;
+        return 2.49;
     }
 }
