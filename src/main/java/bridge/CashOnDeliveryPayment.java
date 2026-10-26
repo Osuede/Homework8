@@ -9,8 +9,8 @@ public class CashOnDeliveryPayment extends PaymentNotification {
 
     @Override
     public void notifyCustomer(String customerName, double amount) {
-        // TODO: build a message that includes customerName, the word "cash" and the amount
-        //       (e.g. "please have $49.99 in cash ready")
-        //       and send it through channel.send(...)
+        String message = "Hi " + customerName + ", your order is on its way. Please have $"
+                + String.format("%.2f", amount) + " in cash ready for the driver.";
+        channel.send(message);
     }
 }

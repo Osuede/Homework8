@@ -11,8 +11,8 @@ public class OnlinePaymentNotification extends PaymentNotification {
 
     @Override
     public void notifyCustomer(String customerName, double amount) {
-        // TODO: build a message that includes customerName, method and the amount
-        //       (format money as String.format("%.2f", amount))
-        //       and send it through channel.send(...)
+        String message = "Hi " + customerName + ", we received your " + method
+                + " payment of $" + String.format("%.2f", amount) + ". Thank you for your order!";
+        channel.send(message);
     }
 }
