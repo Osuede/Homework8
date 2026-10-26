@@ -11,7 +11,8 @@ public class BitcoinPayment extends PaymentNotification {
 
     @Override
     public void notifyCustomer(String customerName, double amount) {
-        // TODO: build a message that includes customerName, the word "Bitcoin" and the amount
-        //       and send it through channel.send(...)
+        String message = "Hi " + customerName + ", your Bitcoin payment of $"
+                + String.format("%.2f", amount) + " has been confirmed.";
+        channel.send(message);
     }
 }

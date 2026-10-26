@@ -21,5 +21,16 @@ public class BridgeDriver {
         PaymentNotification cashSms = new CashOnDeliveryPayment(new SmsChannel());
         cashSms.notifyCustomer("Dave", 18.75);
 
+        // ---------- Part 2 ----------
+        System.out.println();
+        System.out.println("===== Part 2 =====");
+
+        System.out.println("-- Bitcoin + Email --");
+        PaymentNotification bitcoinEmail = new BitcoinPayment(new EmailChannel());
+        bitcoinEmail.notifyCustomer("Eve", 250.00);
+
+        System.out.println("-- Bitcoin + SMS --");
+        PaymentNotification bitcoinSms = new BitcoinPayment(new SmsChannel());
+        bitcoinSms.notifyCustomer("Frank", 75.25);
     }
 }
