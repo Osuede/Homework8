@@ -32,5 +32,17 @@ public class BridgeDriver {
         System.out.println("-- Bitcoin + SMS --");
         PaymentNotification bitcoinSms = new BitcoinPayment(new SmsChannel());
         bitcoinSms.notifyCustomer("Frank", 75.25);
+
+        // ---------- Part 3 ----------
+        System.out.println();
+        System.out.println("===== Part 3 =====");
+
+        System.out.println("-- Online + Push --");
+        PaymentNotification onlinePush = new OnlinePaymentNotification(new PushChannel(), "PayPal");
+        onlinePush.notifyCustomer("Grace", 64.99);
+
+        System.out.println("-- Bitcoin + Push --");
+        PaymentNotification bitcoinPush = new BitcoinPayment(new PushChannel());
+        bitcoinPush.notifyCustomer("Heidi", 500.00);
     }
 }

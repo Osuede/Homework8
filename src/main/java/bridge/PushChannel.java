@@ -6,6 +6,6 @@ package bridge;
 public class PushChannel implements NotificationChannel {
     @Override
     public void send(String message) {
-        // TODO: print "[PUSH] " followed by the message, e.g. "[PUSH] Payment received"
+        System.out.println("[PUSH] " + message);
     }
 }
